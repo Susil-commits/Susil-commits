@@ -1,11 +1,11 @@
 <div align="center">
 
 <!-- ANIMATED WAVE BANNER -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,50:2C5364,100:00C9A7&height=220&section=header&text=Susil%20Kumar%20Nayak&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20Developer%20%7C%20MERN%20%2B%20TypeScript&descAlignY=58&descSize=20" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,50:2C5364,100:00C9A7&height=200&section=header&text=Susil%20Kumar%20Nayak&fontSize=44&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20Developer%20%7C%20MERN%20%2B%20TypeScript&descAlignY=58&descSize=18" width="100%"/>
 
 <!-- TYPING SVG -->
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=800&color=00C9A7&center=true&vCenter=true&random=false&width=650&lines=Building+production-style+full-stack+apps;React+%7C+Node.js+%7C+Express+%7C+MongoDB+%7C+PostgreSQL;Turning+Lighthouse+scores+into+100%2F100%2C+one+commit+at+a+time;Open+to+Full-Stack+%2F+SDE+opportunities" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=800&color=00C9A7&center=true&vCenter=true&random=false&width=600&lines=Building+production-style+full-stack+apps;React+%7C+Node.js+%7C+Express+%7C+MongoDB+%7C+PostgreSQL;Turning+Lighthouse+scores+into+100%2F100%2C+one+commit+at+a+time;Open+to+Full-Stack+%2F+SDE+opportunities" alt="Typing SVG" />
 </a>
 
 <br/>
@@ -23,11 +23,6 @@
 </div>
 
 <br/>
-
-<!-- ABOUT + STATS SIDE BY SIDE -->
-<table width="100%">
-<tr>
-<td width="55%" valign="top">
 
 ### 🚀 About Me
 
@@ -47,22 +42,7 @@ fun_fact: I benchmark my own apps before I ship them 📊
 - 🏆 NASSCOM FutureSkills Prime Gold-certified — Big Data Technology.
 - ⚡ Ask me about PostgreSQL row-level locking or why I chose Mongo over Postgres (I have opinions).
 
-</td>
-<td width="45%" valign="top">
-
-<img src="https://github-readme-stats.vercel.app/api?username=Susil-commits&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="100%"/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Susil-commits&theme=tokyonight&hide_border=true" width="100%"/>
-
-</td>
-</tr>
-</table>
-
-<div align="center">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Susil-commits&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" width="48%"/>
-</div>
-
----
+<br/>
 
 ### 🛠️ Tech Stack
 
@@ -70,9 +50,7 @@ fun_fact: I benchmark my own apps before I ship them 📊
 
 <img src="https://skillicons.dev/icons?i=react,ts,js,html,tailwind,nodejs,express,mongodb,postgres,mysql,git,github,docker,aws,vercel,figma&perline=8" />
 
-</div>
-
-<div align="center">
+<br/><br/>
 
 ![REST APIs](https://img.shields.io/badge/REST_APIs-black?style=flat-square)
 ![JWT Auth](https://img.shields.io/badge/JWT_Authentication-black?style=flat-square)
@@ -83,75 +61,49 @@ fun_fact: I benchmark my own apps before I ship them 📊
 
 </div>
 
----
+<br/>
+
+### 📊 GitHub Stats
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=Susil-commits&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&cache_seconds=1800" width="49%"/>
+<img src="https://streak-stats.demolab.com/?user=Susil-commits&theme=tokyonight&hide_border=true" width="49%"/>
+
+<br/>
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Susil-commits&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&cache_seconds=1800" width="49%"/>
+
+</div>
+
+<br/>
 
 ### 🏗️ Featured Projects
 
-<table width="100%">
-<tr>
-<td width="33%" valign="top">
-
-**[🌾 FaRm](https://github.com/Susil-commits/FarmDirect)**
-Farmer-to-Consumer Marketplace
-
+**[🌾 FaRm — Farmer-to-Consumer Marketplace](https://github.com/Susil-commits/FarmDirect)**
 `React` `TypeScript` `Node.js` `MongoDB`
-
 - 91/100 Lighthouse Performance, 106KB gzipped bundle
 - MongoDB compound indexing: 240ms → 12ms
-- Artillery load-tested @ 200 VUs, 0% errors
+- Artillery load-tested @ 200 concurrent users, 0% errors
 
-</td>
-<td width="33%" valign="top">
-
-**[🍲 Left2Serve](https://github.com/Susil-commits/Left2Serve)**
-Food Redistribution Platform
-
+**[🍲 Left2Serve — Food Redistribution Platform](https://github.com/Susil-commits/Left2Serve)**
 `React` `TypeScript` `PostgreSQL`
-
 - 99/100 Lighthouse Performance
-- PostgreSQL B-tree index: 340ms → 12ms (96%↓)
-- 85% Jest/Supertest coverage
+- PostgreSQL B-tree index: 340ms → 12ms (96% faster)
+- 85% Jest/Supertest test coverage
 
-</td>
-<td width="33%" valign="top">
-
-**[🚗 MyMate](https://github.com/Susil-commits/MyMate)**
-Driver Booking Platform
-
+**[🚗 MyMate — Driver Booking Platform](https://github.com/Susil-commits/MyMate)**
 `React` `TypeScript` `MongoDB`
-
 - 100/100 Lighthouse Performance & SEO
-- Query time cut to ~1ms via indexing
-- Fixed Socket.IO race condition
+- Query time cut to ~1ms via compound indexing
+- Fixed a live Socket.IO race condition
 
-</td>
-</tr>
-</table>
-
----
-
-### 🏆 Trophies
-
-<div align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=Susil-commits&theme=tokyonight&no-frame=true&row=1&column=6" width="100%"/>
-</div>
-
----
-
-### 📈 Contribution Snake
-
-<div align="center">
-<img src="https://raw.githubusercontent.com/Susil-commits/Susil-commits/output/github-contribution-grid-snake.svg" width="100%"/>
-</div>
-
-> *(This animates automatically once the GitHub Action below is set up — see setup guide.)*
-
----
+<br/>
 
 <div align="center">
 
 ![Profile Views](https://komarev.com/ghpvc/?username=Susil-commits&color=00C9A7&style=for-the-badge&label=PROFILE+VIEWS)
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00C9A7,100:0F2027&height=120&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00C9A7,100:0F2027&height=100&section=footer" width="100%"/>
 
 </div>
