@@ -71,10 +71,6 @@ fun_fact: I benchmark my own apps before I ship them 📊
 
 <br/><br/>
 
-<img src="https://img.shields.io/github/followers/Susil-commits?style=for-the-badge&logo=github&color=00C9A7&labelColor=1a1a2e"/>
-<img src="https://img.shields.io/github/stars/Susil-commits?style=for-the-badge&logo=github&color=00C9A7&labelColor=1a1a2e"/>
-<img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&logo=github&label=Public%20Repos&query=public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2FSusil-commits&color=00C9A7&labelColor=1a1a2e"/>
-
 </div>
 
 <br/>
