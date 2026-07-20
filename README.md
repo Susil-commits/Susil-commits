@@ -67,12 +67,13 @@ fun_fact: I benchmark my own apps before I ship them 📊
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Susil-commits&show_icons=true&theme=tokyonight&hide_border=true" width="49%"/>
-<img src="https://streak-stats.demolab.com/?user=Susil-commits&theme=tokyonight&hide_border=true" width="49%"/>
+<img src="https://streak-stats.demolab.com/?user=Susil-commits&theme=tokyonight&hide_border=true" width="70%"/>
 
-<br/>
+<br/><br/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Susil-commits&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" width="49%"/>
+<img src="https://img.shields.io/github/followers/Susil-commits?style=for-the-badge&logo=github&color=00C9A7&labelColor=1a1a2e"/>
+<img src="https://img.shields.io/github/stars/Susil-commits?style=for-the-badge&logo=github&color=00C9A7&labelColor=1a1a2e"/>
+<img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&logo=github&label=Public%20Repos&query=public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2FSusil-commits&color=00C9A7&labelColor=1a1a2e"/>
 
 </div>
 
