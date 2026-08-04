@@ -63,18 +63,6 @@ fun_fact: I benchmark my own apps before I ship them 📊
 
 <br/>
 
-### 📊 GitHub Stats
-
-<div align="center">
-
-<img src="https://streak-stats.demolab.com/?user=Susil-commits&theme=tokyonight&hide_border=true" width="70%"/>
-
-<br/><br/>
-
-</div>
-
-<br/>
-
 ### 🏗️ Featured Projects
 
 **[🌾 FaRm — Farmer-to-Consumer Marketplace](https://github.com/Susil-commits/FarmDirect)**
