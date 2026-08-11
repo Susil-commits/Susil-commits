@@ -123,12 +123,6 @@ Built 5+ reusable UI/API components for a real-time video-handling platform on t
 ## GitHub Stats
 
 <div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Susil-commits&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Susil-commits&layout=compact&theme=tokyonight&hide_border=true"/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Susil-commits&theme=tokyonight&hide_border=true"/>
-
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=Susil-commits&theme=tokyo-night&hide_border=true"/>
 
 </div>
