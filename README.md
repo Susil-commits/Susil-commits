@@ -2,9 +2,9 @@
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1e3a5f,100:0f172a&height=220&section=header&text=Susil%20Kumar%20Nayak&fontSize=46&fontColor=ffffff&fontAlignY=38&desc=Backend-Focused%20Full-Stack%20Developer%20%C2%B7%20B.Tech%20CSE%20'26&descSize=18&descAlignY=58&animation=fadeIn"/>
 
-<a href="https://github.com/Susil-commits">
-  <img src="https://readme-typing-svg.demolab.com/?lines=Shipping+REST+APIs+that+hold+up+under+load;200%2B+concurrent+users+%C2%B7+sub-150ms+p95+latency;Race+conditions+%E2%86%92+resolved.+Indexes+%E2%86%92+tuned.;Currently+leveling+up+in+Haskell+%2F+FP;&font=Fira+Code&center=true&width=650&height=40&color=38BDF8&vCenter=true&size=20&pause=1800"/>
-</a>
+<p width="700" align="center">
+A final-year Computer Science student and full-stack developer. What I enjoy most about development is taking a real-world problem and turning it into something that actually works end to end. I've built applications like a farmer-to-consumer marketplace, a food redistribution platform, and a driver booking system, where I focused not just on features but also on performance, reliability, and scalability. I've also gained industry experience as a backend developer intern, working with APIs, databases, debugging, and Agile development. I'm now looking for an opportunity where I can contribute, learn from experienced engineers, and grow as a developer.
+</p>
 
 <br>
 
