@@ -1,7 +1,5 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1e3a5f,100:0f172a&height=220&section=header&text=Susil%20Kumar%20Nayak&fontSize=46&fontColor=ffffff&fontAlignY=38&desc=Full-Stack%20Developer%20%C2%B7%20Platform%20%26%20Infra%20Automation%20%C2%B7%20B.Tech%20CSE%20'26&descSize=16&descAlignY=58&animation=fadeIn"/>
-
 <p width="700" align="center">
 A final-year Computer Science student who likes taking a real-world problem all the way to something that runs in production. I've built three consumer-facing platforms on the MERN stack, and I've since moved into backend/platform engineering — designing and building systems that manage <em>other</em> systems: deployment controllers, health-gated rollouts, and event-driven self-healing infrastructure. I care about what breaks a system in production (race conditions, drift, retry storms) as much as what ships a feature.
 </p>
