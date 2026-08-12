@@ -1,9 +1,9 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1e3a5f,100:0f172a&height=220&section=header&text=Susil%20Kumar%20Nayak&fontSize=46&fontColor=ffffff&fontAlignY=38&desc=Backend-Focused%20Full-Stack%20Developer%20%C2%B7%20B.Tech%20CSE%20'26&descSize=18&descAlignY=58&animation=fadeIn"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1e3a5f,100:0f172a&height=220&section=header&text=Susil%20Kumar%20Nayak&fontSize=46&fontColor=ffffff&fontAlignY=38&desc=Full-Stack%20Developer%20%C2%B7%20Platform%20%26%20Infra%20Automation%20%C2%B7%20B.Tech%20CSE%20'26&descSize=16&descAlignY=58&animation=fadeIn"/>
 
 <p width="700" align="center">
-A final-year Computer Science student and full-stack developer. What I enjoy most about development is taking a real-world problem and turning it into something that actually works end to end. I've built applications like a farmer-to-consumer marketplace, a food redistribution platform, and a driver booking system, where I focused not just on features but also on performance, reliability, and scalability. I've also gained industry experience as a backend developer intern, working with APIs, databases, debugging, and Agile development. I'm now looking for an opportunity where I can contribute, learn from experienced engineers, and grow as a developer.
+A final-year Computer Science student who likes taking a real-world problem all the way to something that runs in production. I've built three consumer-facing platforms on the MERN stack, and I've since moved into backend/platform engineering — designing and building systems that manage <em>other</em> systems: deployment controllers, health-gated rollouts, and event-driven self-healing infrastructure. I care about what breaks a system in production (race conditions, drift, retry storms) as much as what ships a feature.
 </p>
 
 <br>
@@ -18,7 +18,63 @@ A final-year Computer Science student and full-stack developer. What I enjoy mos
 
 ## Focus
 
-Three independently built platforms, each pushed through load testing and fixed for the failure modes that actually show up in production — race conditions, N+1 queries, retry storms, duplicate writes. Currently building functional-programming fundamentals in **Haskell** to bring FP discipline (pure functions, no shared state) into backend design.
+Two tracks, one habit: don't just build the happy path — engineer for the failure modes that actually show up in production.
+
+- **Platform Engineering (current):** `HyperDeploy` and `EdgeGuard` — a hybrid deployment controller and a self-healing edge-monitoring platform, both built around explicit failure-scenario matrices (crash loops, drift, unsigned artifacts, WAN outages) rather than just the demo path.
+- **Full-Stack Applications:** Three MERN platforms — a farmer marketplace, a food-redistribution network, and a driver-booking system — each load-tested and hardened against race conditions, N+1 queries, and duplicate writes.
+
+Currently building functional-programming fundamentals in **Haskell** to bring FP discipline (pure functions, no shared state) into backend and rule-engine design.
+
+<br>
+
+## 🛠️ Platform Engineering
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### [HyperDeploy](https://github.com/Susil-commits/HyperDeploy) — Hybrid Deployment Controller
+
+![Python](https://img.shields.io/badge/Python%203.13-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
+![Cosign](https://img.shields.io/badge/Cosign-Sigstore-FF69B4?style=flat-square)
+
+A GitOps-aligned control plane that unifies **bare-metal/VM automation (Ansible)** and **container orchestration (Kubernetes)** behind one secure release pipeline — instead of managing them as two disconnected tools.
+
+- Immutable-artifact enforcement: rejects mutable tags, verifies **Cosign** signatures before a release ever touches the DB.
+- Health-gated rollouts: classifies pod state (`CrashLoopBackOff`, stalled rollout, failed readiness) and auto-triggers rollback to the last known-good release.
+- GitOps drift reconciliation: auto-corrects drift in dev, alert-only in prod — no silent prod mutations.
+- Enterprise RBAC (Viewer → Admin) with dual-control self-approval prevention and non-bypassable audit logging.
+- Async-safe by design: idempotent job queue, stale-worker reaper, exponential-backoff DB retries.
+
+<sub>Engineered against a **24-scenario failure matrix** (A1–G1) — mutable tags, unsigned images, race conditions on concurrent releases, SSH-unreachable hosts, worker crashes mid-job, secret leaks in logs, and more — each with a defined detection path and system response.</sub>
+
+</td>
+<td width="50%" valign="top">
+
+### [EdgeGuard](https://github.com/Susil-commits/EdgeGuard) — Self-Healing Edge Monitoring
+
+![Python](https://img.shields.io/badge/Python%203.12-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![EDA](https://img.shields.io/badge/Event--Driven%20Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Postgres](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+
+An edge fleet monitoring platform built around **Red Hat Event-Driven Ansible** and predictive alerting — detection and remediation are fully decoupled, so new response policies are a YAML rulebook change, not a redeploy.
+
+- Predictive EWMA trend forecasting: extrapolates metric trajectories to catch threshold breaches **up to 6 hours** before they happen.
+- Offline-first edge agent: buffers telemetry in a local SQLite WAL spool during WAN outages, replays with zero duplicates via `event_id` idempotency.
+- Remediation is declarative: incidents match against YAML rulebooks (`ansible-rulebook`), which trigger allow-listed Ansible playbooks over SSH — no ad-hoc scripting on prod hosts.
+- Security-first automation: server-side `ALLOWED_PLAYBOOKS` registry blocks unauthorized playbook execution; every action lands in an immutable audit ledger.
+- Full observability loop: Prometheus `/metrics` + pre-built Grafana dashboards, multi-tenant RBAC, optional Keycloak OIDC SSO.
+
+<sub>Every major component — EWMA forecaster, offline spooling, EDA rulebook integration, K8s manifests, Prometheus/Grafana wiring, Keycloak OIDC — is **built**, not just designed; see the repo's built-vs-designed audit table.</sub>
+
+</td>
+</tr>
+</table>
 
 <br>
 
@@ -32,21 +88,21 @@ Three independently built platforms, each pushed through load testing and fixed 
 
 **Backend & APIs**
 <br>
-<img src="https://skillicons.dev/icons?i=nodejs,express,socketio" />
+<img src="https://skillicons.dev/icons?i=fastapi,nodejs,express,socketio" />
 
-**Databases**
+**Data & Queues**
 <br>
-<img src="https://skillicons.dev/icons?i=mongodb,postgres,mysql" />
+<img src="https://skillicons.dev/icons?i=postgres,mongodb,redis,mysql,sqlite" />
 
-**Reliability & Testing**
+**Infra & Automation**
 <br>
-<img src="https://skillicons.dev/icons?i=jest" />
-![Supertest](https://img.shields.io/badge/Supertest-25D366?style=flat-square)
+<img src="https://skillicons.dev/icons?i=kubernetes,docker,ansible,git,github" />
+
+**Observability & Reliability**
+<br>
+<img src="https://skillicons.dev/icons?i=prometheus,grafana,jest" />
 ![Artillery](https://img.shields.io/badge/Artillery-FF4F00?style=flat-square)
-
-**Cloud & DevOps**
-<br>
-<img src="https://skillicons.dev/icons?i=aws,docker,git,github" />
+![Cosign](https://img.shields.io/badge/Cosign-FF69B4?style=flat-square)
 
 **Frontend**
 <br>
@@ -56,62 +112,56 @@ Three independently built platforms, each pushed through load testing and fixed 
 
 <br>
 
-## Projects
+## Full-Stack Applications
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+**[FaRm](https://github.com/Susil-commits/FarmDirect)** — Farmer-to-Consumer Marketplace
+`React` `TS` `Node` `MongoDB`
+
+Load-tested at 200 concurrent users, sub-150ms p95. Compound indexing cut filter-query latency 95%. Idempotency-key checkout protection + z-score order anomaly detection.
+
+</td>
+<td width="33%" valign="top">
+
+**[Left2Serve](https://github.com/Susil-commits/Left2Serve)** — Food Redistribution
+`React` `TS` `Node` `PostgreSQL`
+
+`SERIALIZABLE` transactions resolve donation race conditions. Rate-limiting blocked 18K+ excess requests under load. Real-time Socket.io matching + self-healing retry/circuit-breaker notifications.
+
+</td>
+<td width="33%" valign="top">
+
+**[MyMate](https://github.com/Susil-commits/MyMate)** — Driver Booking Platform
+`React` `TS` `Node` `MongoDB`
+
+Fixed a production Socket.IO race by re-sequencing writes before event emission. Live WebSocket tracking, AI-heuristic driver matching, Tesseract.js OCR for KYC.
+
+</td>
+</tr>
+</table>
+
+<br>
+
+## Experience & Certifications
 
 <table>
 <tr>
 <td width="50%" valign="top">
-
-### [FaRm — Farmer-to-Consumer Marketplace](https://github.com/Susil-commits/FarmDirect)
-`React.js` `TypeScript` `Node.js` `Express.js` `MongoDB` `Tailwind CSS` `Artillery`
-
-- Load-tested at 200 concurrent users — sub-150ms p95 latency, 0% error rate.
-- Cut filter query latency from ~240ms to ~12ms (95%) via MongoDB compound indexing.
-- Migrated the entire backend from JavaScript to TypeScript for full type safety.
-- Idempotency-key duplicate-request protection on checkout: Mongo unique constraint + atomic transaction + cached response replay.
-- Rolling-average / z-score anomaly detection on order transactions — flags abnormal orders without an ML model.
-- Patched all high/critical dependency vulnerabilities via `npm audit`, including a Nodemailer SSRF flaw.
-
-</td>
-<td width="50%" valign="top">
-
-### [Left2Serve — Food Redistribution Platform](https://github.com/Susil-commits/Left2Serve)
-`React.js` `TypeScript` `Node.js` `Express.js` `PostgreSQL` `Tailwind CSS` `Socket.io`
-
-- Resolved race conditions with `SERIALIZABLE` transactions; compound B-tree SQL index cut query latency from 340ms to 12ms (96%).
-- Validated `express-rate-limit` under 19K+ requests at 187 req/sec — 18K+ excess requests blocked.
-- 100% Jest/Supertest coverage on auth and reservation flows, 85% overall.
-- Real-time Socket.io chat, a smart donor–NGO–volunteer matching engine, and web push notifications.
-- Self-healing notification delivery: exponential-backoff retry plus a hand-rolled circuit breaker (closed/open/half-open).
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### [MyMate — Driver Booking Platform](https://github.com/Susil-commits/MyMate)
-`React.js` `TypeScript` `Node.js` `Express.js` `MongoDB` `Tailwind CSS` `Tesseract.js`
-
-- Fixed a production Socket.IO race condition by re-sequencing transactional writes to commit before event emission.
-- Load-tested at 200 concurrent users (115 req/sec) while blocking 3,000+ excess requests via rate limiting.
-- MongoDB compound indexing on search fields cut query time to ~1ms.
-- Live WebSocket location tracking, AI-heuristic driver matching, and Tesseract.js OCR for license KYC verification.
-- Driver-matching scoring rewritten as pure, side-effect-free functions, with a parallel Haskell proof-of-concept.
-
-</td>
-<td width="50%" valign="top">
-
-### Experience
 
 **Backend Developer Intern**
 Techgeering Solutions Pvt. Ltd. — Oct '25 to Feb '26
 
 Built 5+ reusable UI/API components for a real-time video-handling platform on the MERN stack; resolved 20+ bugs across the SDLC in an Agile/Scrum team of 4.
 
-### Certifications
+</td>
+<td width="50%" valign="top">
+
+- Oracle Cloud Infrastructure 2025 Certified Generative AI Professional
+- Oracle Cloud Infrastructure 2025 Certified Data Science Professional
 - Oracle Certified Foundations Associate (Agentic AI) — 88%
-- NPTEL — Software Testing
-- NPTEL — IoT 4.0
 - NASSCOM FutureSkills Prime — Big Data (Gold)
 
 </td>
