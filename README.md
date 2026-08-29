@@ -1,20 +1,12 @@
 <div align="center">
 
-# SUSIL NAYAK
+# SUSIL KUMAR NAYAK
 
-### AI Engineer · Builder · Systems
+### AI Engineer · Full Stack Developer · Systems and DevOps 
 
 **I build ambitious AI-powered products and systems.**
 
 <br>
-
-<a href="https://github.com/Susil-commits">
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
-</a>
-&nbsp;
-<a href="https://www.linkedin.com/">
-<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
-</a>
 
 </div>
 
