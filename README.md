@@ -4,16 +4,6 @@
 
 ### AI/ML Engineer • Software Engineer • Systems Builder
 
-<p>
-  <a href="https://github.com/Susil-commits">
-    <img src="https://img.shields.io/badge/GitHub-Susil--commits-181717?style=for-the-badge&logo=github">
-  </a>
-  <a href="https://www.linkedin.com/">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin">
-  </a>
-  <img src="https://komarev.com/ghpvc/?username=Susil-commits&style=for-the-badge&color=blueviolet">
-</p>
-
 <br>
 
 > **I build intelligent systems that don't just predict — they reason, optimize, observe, and act.**
@@ -343,20 +333,6 @@ Connects food donors, NGOs and volunteers to reduce food waste through a cloud-n
 </p>
 
 ---
-
-# 📊 GitHub Activity
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=Susil-commits&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" width="49%">
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Susil-commits&theme=tokyonight&hide_border=true" width="49%">
-
-<br><br>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Susil-commits&layout=compact&theme=tokyonight&hide_border=true" width="42%">
-
-</div>
 
 ---
 
